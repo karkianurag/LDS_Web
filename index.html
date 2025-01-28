@@ -1,37 +1,68 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="scss/design.css" />
+    <link rel="stylesheet" href="assets/scss/design.css" />
     <title>DLS Website</title>
   </head>
   <body>
-    <div class="nav">
-      <div class="nav-div">
+    <header class="header">
+      <div class="head-div">
         <a href="#" title="Door Solutions">
           <img
-            class="nav-img"
+            class="company-logo"
             src="images/opened-door-aperture.png"
             alt="https://www.flaticon.com/free-icons/door"
           />
         </a>
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#container-2">Work</a></li>
-          <li><a href="#partnership">Partnership</a></li>
-          <li><a href="#footer">Contact</a></li>
-        </ul>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">About</a>
+              <ul class="dropdown">
+                <li><a href="#about1">About 1</a></li>
+                <li><a href="#about2">About 2</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#container-2">Work</a>
+              <ul class="dropdown">
+                <li><a href="#project1">Project 1</a></li>
+                <li><a href="#project2">Project 2</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#partnership">Partnership</a>
+              <ul class="dropdown">
+                <li><a href="#partner1">Partner 1</a></li>
+                <li><a href="#partner2">Partner 2</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#footer">Contact</a>
+              <ul class="dropdown">
+                <li><a href="#contact1">Contact 1</a></li>
+                <li><a href="#contact2">Contact 2</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </div>
+    </header>
     <div id="container-1">
       <p class="lead">
         LDS Welcomes YOU
         <span>To CATER for your need, you didn't know you NEEDED</span>
       </p>
-      <img class="workhub" src="images/21114021.jpg" alt="freepik.com" />
+      <img
+        class="workhub"
+        src="assets/uploads/21114021.jpg"
+        alt="freepik.com"
+      />
     </div>
     <div class="work">Our Workforce</div>
-    <div id="container-2">
+    <section id="container-2">
       <div class="developer">
         <div>
           <h2>Developer</h2>
@@ -40,7 +71,7 @@
             your World to the Web
           </p>
         </div>
-        <img src="images/dev.jpg" alt="Coding for development" />
+        <img src="assets/uploads/dev.jpg" alt="Coding for development" />
       </div>
       <div class="ui-ux" id="reverse">
         <div>
@@ -50,7 +81,7 @@
             better experience
           </p>
         </div>
-        <img src="images/ux.jpg" alt="Coding for development" />
+        <img src="assets/uploads/ux.jpg" alt="Coding for development" />
       </div>
       <div class="data-scientist">
         <div>
@@ -60,9 +91,9 @@
             and thought insight with us
           </p>
         </div>
-        <img src="images/data.jpg" alt="Coding for development" />
+        <img src="assets/uploads/data.jpg" alt="Coding for development" />
       </div>
-      <div class="qa reverse">
+      <div class="qa reversed">
         <div>
           <h2>QA</h2>
           <p>
@@ -70,35 +101,37 @@
             each and evey client's dream
           </p>
         </div>
-        <img src="images/qa.jpg" alt="Coding for development" />
+        <img src="assets/uploads/qa.jpg" alt="Coding for development" />
       </div>
-    </div>
+    </section>
+    <div class="team">Our Team</div>
+    <section class="member"></section>
     <div id="partnership">
       <div class="logos">
-        <img src="logo/3m.svg" alt="3m logo" />
-        <img src="logo/barstool-store.svg" alt="barstool-store logo" />
-        <img src="logo/budweiser.svg" alt="budweiser logo" />
-        <img src="logo/buzzfeed.svg" alt="buzzfeed logo" />
-        <img src="logo/forbes.svg" alt="forbes logo" />
-        <img src="logo/macys.svg" alt="macys logo" />
-        <img src="logo/menshealth.svg" alt="menshealth logo" />
-        <img src="logo/mrbeast.svg" alt="mrbeast logo" />
+        <img src="assets/logo/3m.svg" alt="3m logo" />
+        <img src="assets/logo/barstool-store.svg" alt="barstool-store logo" />
+        <img src="assets/logo/budweiser.svg" alt="budweiser logo" />
+        <img src="assets/logo/buzzfeed.svg" alt="buzzfeed logo" />
+        <img src="assets/logo/forbes.svg" alt="forbes logo" />
+        <img src="assets/logo/macys.svg" alt="macys logo" />
+        <img src="assets/logo/menshealth.svg" alt="menshealth logo" />
+        <img src="assets/logo/mrbeast.svg" alt="mrbeast logo" />
       </div>
       <div class="logos">
-        <img src="logo/3m.svg" alt="3m logo" />
-        <img src="logo/barstool-store.svg" alt="barstool-store logo" />
-        <img src="logo/budweiser.svg" alt="budweiser logo" />
-        <img src="logo/buzzfeed.svg" alt="buzzfeed logo" />
-        <img src="logo/forbes.svg" alt="forbes logo" />
-        <img src="logo/macys.svg" alt="macys logo" />
-        <img src="logo/menshealth.svg" alt="menshealth logo" />
-        <img src="logo/mrbeast.svg" alt="mrbeast logo" />
+        <img src="assets/logo/3m.svg" alt="3m logo" />
+        <img src="assets/logo/barstool-store.svg" alt="barstool-store logo" />
+        <img src="assets/logo/budweiser.svg" alt="budweiser logo" />
+        <img src="assets/logo/buzzfeed.svg" alt="buzzfeed logo" />
+        <img src="assets/logo/forbes.svg" alt="forbes logo" />
+        <img src="assets/logo/macys.svg" alt="macys logo" />
+        <img src="assets/logo/menshealth.svg" alt="menshealth logo" />
+        <img src="assets/logo/mrbeast.svg" alt="mrbeast logo" />
       </div>
     </div>
     <div id="footer">
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#container-1">Work</a></li>
+        <li><a href="#container-2">Work</a></li>
         <li><a href="#partnership">Partnership</a></li>
         <li><a href="#contact">Contact</a></li>
         <li class="last">&copy; 2025 LDS</li>
@@ -107,7 +140,7 @@
         <fieldset>
           <legend>Get in touch</legend>
           <div class="ceo">
-            <img src="logo/profile.png" alt="freepik profile" />
+            <img src="assets/logo/profile.png" alt="freepik profile" />
             <div class="info1">
               <p>Mr. CEO</p>
               <address>Kathmandu,Nepal</address>
@@ -116,7 +149,7 @@
           </div>
           <br class="line" />
           <div class="senior">
-            <img src="logo/woman.png" alt="prosymbols woman profile" />
+            <img src="assets/logo/woman.png" alt="prosymbols woman profile" />
             <div class="info2">
               <p>Ms. Senior Developer</p>
               <address>Bhaktapur,Nepal</address>
