@@ -3,6 +3,14 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
+    />
     <link rel="stylesheet" href="assets/scss/design.css" />
     <title>DLS Website</title>
   </head>
@@ -51,16 +59,63 @@
       </div>
     </header>
     <div id="container-1">
-      <p class="lead">
-        LDS Welcomes YOU
-        <span>To CATER for your need, you didn't know you NEEDED</span>
-      </p>
-      <img
-        class="workhub"
-        src="assets/uploads/21114021.jpg"
-        alt="freepik.com"
-      />
+      <section class="swiper-container">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div class="swiper-slide-content">
+              
+              <img
+                class="workhub"
+                src="assets/uploads/21114021.jpg"
+                alt="freepik.com"
+              />
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div class="swiper-slide-content">
+              <img src="assets/uploads/10032888.jpg" alt="office image 2" />
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <div class="swiper-slide-content">
+              <img src="assets/uploads/5375782.jpg" alt="office image 3" />
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </section>
     </div>
+
+    <section id="article-aside">
+  <article class="main-article">
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat cupiditate libero illum dolorum commodi, sunt animi sit doloribus delectus dolore. Nesciunt nemo, corporis nam vel earum non et excepturi dolore!
+    </p>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint dolore illo vel cupiditate amet aliquam obcaecati labore? Dolorem, qui! Maxime voluptatum fuga quae. Tenetur dicta numquam officiis possimus suscipit error?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates veritatis amet, minus repudiandae quasi, tenetur, in repellendus eaque similique autem cumque expedita. Vitae facere unde cumque modi aliquid animi vero!
+    </p>
+  </article>
+
+  <aside class="related-info">
+    <h3>Related Articles</h3>
+    <ul>
+      <li><a href="#">Why Lorem?</a></li>
+      <li><a href="#">Understanding the Role of a Lorem</a></li>
+      <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+      <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
+    </ul>
+  </aside>
+</section>
+
     <div class="work">Our Workforce</div>
     <section id="container-2">
       <div class="developer">
@@ -105,7 +160,124 @@
       </div>
     </section>
     <div class="team">Our Team</div>
-    <section class="member"></section>
+    <section class="member">
+      <a href="#slide1" data-fancybox="gallery">
+            <div class="person">
+              <img
+                src="assets/logo/icons8-employee-160 -male.png"
+                alt="employee1"
+                srcset="">
+            </div>
+          </a>
+          <a href="#slide2" data-fancybox="gallery">
+            <div class="person">
+              <img
+                src="assets/logo/icons8-employee-160.png"
+                alt="employee2"
+                srcset=""
+              />
+            </div>
+          </a>
+        
+          <a href="#slide3" data-fancybox="gallery">
+            <div class="person">
+              <img
+                src="assets/logo/icons8-employee-96.png"
+                alt="employee3"
+                style="width: 160px"
+              />
+            </div>
+          </a>
+
+          <a href="#slide4" data-fancybox="gallery">
+            <div class="person">
+              <img
+                src="assets/logo/icons8-employee-96 (1).png"
+                alt="employee4"
+                style="width: 160px"
+              />
+            </div>
+          </a>
+      </div>
+
+          <!-- hidden div for fancybox -->
+
+      <div style="display: none" id="slide1">
+         <div class="profile-container">
+          <img src="assets/logo/icons8-employee-160 -male.png" alt="Employee1" class="profile-img">
+          <div class="profile-content">
+            <h3>Employee1</h3>
+            <p class="designation">Software Engineer</p>
+            <p class="description">Employee1 is a skilled developer with a passion for building scalable web applications and optimizing backend systems. With 5 years of experience in full-stack development, he thrives in dynamic, collaborative environments.</p>
+        
+            <div class="social-links">
+              <a href="#" target="_blank" class="social-link">LinkedIn</a>
+              <a href="#" target="_blank" class="social-link">GitHub</a>
+              <a href="#" target="_blank" class="social-link">Twitter</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: none" id="slide2">
+       <div class="profile-container">
+          <img src="assets/logo/icons8-employee-160.png" alt="Employee2" class="profile-img">
+          <div class="profile-content">
+            <h3>Employee2</h3>
+            <p class="designation">UI/UX Designer</p>
+            <p class="description">Employee2 is a skilled designer with a passion for building various design. With 5 years of experience in UI/UX, she thrives in dynamic, collaborative environments.</p>
+        
+            <div class="social-links">
+              <a href="#" target="_blank" class="social-link">LinkedIn</a>
+              <a href="#" target="_blank" class="social-link">GitHub</a>
+              <a href="#" target="_blank" class="social-link">Twitter</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <div style="display: none" id="slide3">
+       <div class="profile-container">
+          <img src="assets/logo/icons8-employee-96.png" alt="Employee3" class="profile-img">
+          <div class="profile-content">
+            <h3>Employee3</h3>
+            <p class="designation">Data Scientist</p>
+            <p class="description">Employee3 is a skilled data scientist with a passion for building various data pipeline and data analysis. With 5 years of experience in data sector, he thrives in dynamic, collaborative environments.</p>
+        
+            <div class="social-links">
+              <a href="#" target="_blank" class="social-link">LinkedIn</a>
+              <a href="#" target="_blank" class="social-link">GitHub</a>
+              <a href="#" target="_blank" class="social-link">Twitter</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      \ <div style="display: none" id="slide4">
+       <div class="profile-container">
+          <img src="assets/logo/icons8-employee-96 (1).png" alt="employee4" class="profile-img">
+          <div class="profile-content">
+            <h3>Employee4</h3>
+            <p class="designation">QA</p>
+            <p class="description">Employee4 is a skilled designer with a passion for testing bugs and errors. With 5 years of experience in QA, he thrives in dynamic, collaborative environments.</p>
+        
+            <div class="social-links">
+              <a href="#" target="_blank" class="social-link">LinkedIn</a>
+              <a href="#" target="_blank" class="social-link">GitHub</a>
+              <a href="#" target="_blank" class="social-link">Twitter</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="call">
+      <h2>Inquire with our Team Member</h2>
+      <div>
+      <p>Want to learn more about our team? Feel free to reach out to us!</p>
+      <button>Inquire</button>
+      </div>
+    </section>
+
     <div id="partnership">
       <div class="logos">
         <img src="assets/logo/3m.svg" alt="3m logo" />
@@ -128,36 +300,33 @@
         <img src="assets/logo/mrbeast.svg" alt="mrbeast logo" />
       </div>
     </div>
+   
+
     <div id="footer">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#container-2">Work</a></li>
-        <li><a href="#partnership">Partnership</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li class="last">&copy; 2025 LDS</li>
-      </ul>
-      <div class="info">
-        <fieldset>
-          <legend>Get in touch</legend>
-          <div class="ceo">
-            <img src="assets/logo/profile.png" alt="freepik profile" />
-            <div class="info1">
-              <p>Mr. CEO</p>
-              <address>Kathmandu,Nepal</address>
-              <a href="tel:9876543210">9876543210</a>
-            </div>
-          </div>
-          <br class="line" />
-          <div class="senior">
-            <img src="assets/logo/woman.png" alt="prosymbols woman profile" />
-            <div class="info2">
-              <p>Ms. Senior Developer</p>
-              <address>Bhaktapur,Nepal</address>
-              <a href="tel:9765432108">9765432108</a>
-            </div>
-          </div>
-        </fieldset>
+      <div class="footer-nav">
+       <ul>
+         <li><a href="#">Home</a></li>
+         <li><a href="#container-2">Work</a></li>
+         <li><a href="#partnership">Partnership</a></li>
+         <li><a href="#contact">Contact</a></li>
+       </ul>
       </div>
+      <div class="information">
+        <h3>Contact Information</h3>
+       <p>1234 Street Name, City, Country</p>
+       <p>Phone: (123) 456-7890</p>
+       <p>Email: info@company.com</p>
+      </div>
+      <div class="links">
+        <a href="https://www.facebook.com/">Facebook</a>
+        <a href="https://www.facebook.com/">Twitter</a>
+        <a href="https://www.facebook.com/">LinkedIn</a>
+      </div>
+        <p class="copyright">&copy; 2025 LDS</p>
     </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="/assets/js/development/script.js"></script>
   </body>
 </html>
