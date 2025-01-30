@@ -311,7 +311,11 @@ nav > ul li:hover .dropdown {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var.$bg-color;
+  // background-color: var.$bg-color;
+  background-image: url("../uploads/5375782.jpg");
+  background-size: 100% 100%;
+  background-position: start;
+  background-repeat: no-repeat;
   color: #fff;
   padding: 60px 20px;
   text-align: center;
@@ -321,14 +325,14 @@ nav > ul li:hover .dropdown {
   h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #f0f0f0;
+    color: #000;
     font-family: "LexendGiga";
   }
 
   p {
     font-size: 1.2rem;
     margin-bottom: 30px;
-    color: #e0e0e0;
+    color: #000;
   }
 
   button {

@@ -1,0 +1,456 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "lexendGiga";
+  src: url(../fonts/LexendGiga-Light.ttf) format("ttf"), url(../fonts/NotoSerif_Condensed-ExtraLight.woff) format("woff");
+}
+.header {
+  display: inline-block;
+  width: 100%;
+  height: 10%;
+  padding-top: 10px;
+  background-color: rgb(16, 212, 180);
+}
+
+.head-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  width: 50%;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav > ul li {
+  display: inline-block;
+  position: relative;
+  list-style: none;
+  font-size: 20px;
+  font-weight: normal;
+  padding-right: 45px;
+  font-family: "lexendGiga";
+}
+
+nav a {
+  color: #000000;
+  display: block;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: rgb(207, 233, 206);
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(16, 212, 180);
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: auto;
+  padding: 10px 0;
+  z-index: 1000;
+  border: 2px solid red;
+}
+
+nav > ul li:hover .dropdown {
+  display: block;
+}
+
+.dropdown li {
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.dropdown li a {
+  padding: 0 15px;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown li a:hover {
+  background-color: rgb(207, 233, 206);
+}
+
+.company-logo {
+  width: 10%;
+  height: 20%;
+  margin-left: 20px;
+}
+
+#container-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.swiper-container {
+  width: 100%;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.swiper-slide-content img {
+  max-width: auto;
+  max-height: 900px;
+  width: 100%;
+  height: 600px;
+}
+
+#article-aside {
+  display: flex;
+  gap: 40px;
+  padding: 40px 5%;
+  max-width: 1350px;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: black;
+}
+#article-aside .main-article {
+  flex: 2;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+#article-aside .main-article h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+#article-aside .main-article p {
+  margin-bottom: 15px;
+  color: #555;
+}
+#article-aside .main-article p:last-child {
+  margin-bottom: 0;
+}
+#article-aside .related-info {
+  flex: 1;
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+}
+#article-aside .related-info h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+#article-aside .related-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+#article-aside .related-info ul li {
+  margin-bottom: 10px;
+}
+#article-aside .related-info ul li a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+#article-aside .related-info ul li a:hover {
+  text-decoration: underline;
+}
+
+.work,
+.team {
+  font-size: 50px;
+  padding: 30px 0 30px 520px;
+  color: black;
+}
+
+#container-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#container-2 img {
+  width: 50%;
+  border-radius: 5%;
+}
+#container-2 h2 {
+  position: relative;
+  top: 70px;
+  left: 100px;
+  font-size: 50px;
+  width: 400px;
+  color: rgb(201, 29, 29);
+}
+#container-2 p {
+  position: relative;
+  width: 400px;
+  font-size: 25px;
+  top: 140px;
+  color: rgb(201, 29, 29);
+}
+
+.developer,
+.ui-ux,
+.data-scientist,
+.qa {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  justify-content: space-around;
+  background-color: rgb(16, 212, 180);
+  margin-bottom: 50px;
+}
+
+#reverse,
+.reversed {
+  flex-direction: row-reverse;
+}
+#reverse h2,
+.reversed h2 {
+  position: relative;
+  left: 0;
+  width: 350px;
+}
+#reverse p,
+.reversed p {
+  right: 50px;
+}
+
+.data-scientist h2,
+.qa h2 {
+  left: 40px;
+  right: 0;
+}
+
+.member {
+  display: flex;
+  background-color: #666161;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.member .person {
+  background-color: #585656;
+  padding: 0 20px;
+  position: relative;
+}
+.member .person .person-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 4px solid #666161;
+}
+
+.profile-content {
+  max-width: 400px;
+}
+
+.profile-content h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.designation {
+  font-size: 18px;
+  color: #666161;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-link {
+  font-size: 16px;
+  text-decoration: none;
+  color: #666161;
+  font-weight: 500;
+}
+
+.call {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../uploads/5375782.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.call h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #000;
+  font-family: "LexendGiga";
+}
+.call p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #000;
+}
+.call button {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  background-color: black;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.call button:hover {
+  transform: scale(1.1);
+}
+
+#partnership {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.logos {
+  animation: 5s slide infinite linear;
+}
+
+#partnership:hover .logos {
+  animation-play-state: paused;
+}
+
+.logos img {
+  height: 50px;
+  margin: 0 30px;
+}
+
+#footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 40px 10%;
+  background-color: rgb(16, 212, 180);
+  color: black;
+  font-family: "LexendGiga";
+  width: 100%;
+}
+#footer .footer-nav ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  color: #000000;
+}
+#footer .footer-nav ul li,
+#footer .footer-nav .links a {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #000;
+  text-decoration: none;
+}
+#footer .footer-nav ul li a:hover,
+#footer .footer-nav .links a:hover {
+  color: rgb(207, 233, 206);
+}
+#footer .information {
+  font-size: 1rem;
+}
+#footer .information h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+#footer .information p {
+  margin-bottom: 8px;
+}
+#footer .links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 33%;
+}
+#footer .links a {
+  color: #000;
+}
+#footer .links a:hover {
+  color: rgb(207, 233, 206);
+}
+#footer .copyright {
+  grid-column: span 4;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 20px;
+  color: #000;
+}/*# sourceMappingURL=design.css.map */

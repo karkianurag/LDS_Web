@@ -1,0 +1,17 @@
+@mixin frame($length, $breadth) {
+  width: $length;
+  height: $breadth;
+}
+
+@mixin box($dir: row) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: flex-start;
+}
+
+@mixin work-flow {
+  @include box;
+  justify-content: space-around;
+  background-color: var.$bg-color;
+  margin-bottom: 50px;
+}
