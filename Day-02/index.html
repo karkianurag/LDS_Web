@@ -21,52 +21,50 @@
   </head>
   <body>
     <header class="header">
-      <div class="head-div">
-        <a href="#" title="Door Solutions">
+      <div class="header__container">
+        <div class="header__logo-section">
+          <a class="header__logo-link" href="#" title="Door Solutions"> </a>
           <img
-            class="company-logo"
+            class="header__logo"
             src="images/opened-door-aperture.png"
             alt="https://www.flaticon.com/free-icons/door"
           />
-        </a>
-        <nav>
-          <ul>
-            <li>
-              <a href="#">About</a>
-              <ul class="dropdown">
-                <li><a href="#about1">About 1</a></li>
-                <li><a href="#about2">About 2</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#container-2">Work</a>
-              <ul class="dropdown">
-                <li><a href="#project1">Project 1</a></li>
-                <li><a href="#project2">Project 2</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#partnership">Partnership</a>
-              <ul class="dropdown">
-                <li><a href="#partner1">Partner 1</a></li>
-                <li><a href="#partner2">Partner 2</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#footer">Contact</a>
-              <ul class="dropdown">
-                <li><a href="#contact1">Contact 1</a></li>
-                <li><a href="#contact2">Contact 2</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
+        </div>
+        <ul class="header__nav">
+          <li>
+            <a href="#gallery__banner">About</a>
+            <ul class="nav__dropdown">
+              <li><a href="#about1">About 1</a></li>
+              <li><a href="#about2">About 2</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#feature__section">Work</a>
+            <ul class="nav__dropdown">
+              <li><a href="#project1">Project 1</a></li>
+              <li><a href="#project2">Project 2</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#partnership">Partnership</a>
+            <ul class="nav__dropdown">
+              <li><a href="#partner1">Partner 1</a></li>
+              <li><a href="#partner2">Partner 2</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#footer">Contact</a>
+            <ul class="nav__dropdown">
+              <li><a href="#contact1">Contact 1</a></li>
+              <li><a href="#contact2">Contact 2</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </header>
-    <div id="container-1">
+    <div id="gallery__banner">
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <!-- Slide 1 -->
           <div class="swiper-slide">
             <div class="swiper-slide-content">
               <img
@@ -76,13 +74,13 @@
               />
             </div>
           </div>
-          <!-- Slide 2 -->
+
           <div class="swiper-slide">
             <div class="swiper-slide-content">
               <img src="assets/uploads/10032888.jpg" alt="office image 2" />
             </div>
           </div>
-          <!-- Slide 3 -->
+
           <div class="swiper-slide">
             <div class="swiper-slide-content">
               <img src="assets/uploads/5375782.jpg" alt="office image 3" />
@@ -130,7 +128,7 @@
     </div>
 
     <div class="work">Our Workforce</div>
-    <div id="container-2">
+    <div id="feature__section">
       <div class="developer">
         <div>
           <h2>Developer</h2>
@@ -153,7 +151,7 @@
       </div>
       <div class="data-scientist">
         <div>
-          <h2>Data Scientist</h2>
+          <h2 class="feature__title">Data Scientist</h2>
           <p>
             Control the information from all the data you have. Gain never found
             and thought insight with us
@@ -163,7 +161,7 @@
       </div>
       <div class="qa reversed">
         <div>
-          <h2>QA</h2>
+          <h2 class="feature__title">QA</h2>
           <p>
             Give better product than you can imagine. Work with us to fulfill
             each and evey client's dream
@@ -172,34 +170,34 @@
         <img src="assets/uploads/qa.jpg" alt="Coding for development" />
       </div>
     </div>
-    <div class="team">Our Team</div>
-    <section class="member">
-      <div class="person">
+    <div class="team">Our Team Member</div>
+    <section class="members">
+      <div class="member">
         <img
           src="assets/uploads/icons8-employee-160-male.png"
           alt="employee1"
         />
-        <a class="person-link" href="#slide1" data-fancybox="gallery"> </a>
+        <a class="member-link" href="#slide1" data-fancybox="gallery"> </a>
       </div>
-      <div class="person">
+      <div class="member">
         <img src="assets/uploads/icons8-employee-160.png" alt="employee2" />
-        <a class="person-link" href="#slide2" data-fancybox="gallery"> </a>
+        <a class="member-link" href="#slide2" data-fancybox="gallery"> </a>
       </div>
-      <div class="person">
+      <div class="member">
         <img
           src="assets/uploads/icons8-employee-96.png"
           alt="employee3"
           style="width: 160px"
         />
-        <a class="person-link" href="#slide3" data-fancybox="gallery"> </a>
+        <a class="member-link" href="#slide3" data-fancybox="gallery"> </a>
       </div>
-      <div class="person">
+      <div class="member">
         <img
           src="assets/uploads/icons8-employee-96(1).png"
           alt="employee4"
           style="width: 160px"
         />
-        <a class="person-link" href="#slide4" data-fancybox="gallery"> </a>
+        <a class="member-link" href="#slide4" data-fancybox="gallery"> </a>
       </div>
 
       <!-- hidden div for fancybox -->
@@ -315,7 +313,7 @@
     </section>
 
     <div id="partnership">
-      <div class="logos">
+      <div class="partnership__logos">
         <img src="assets/uploads/3m.svg" alt="3m logo" />
         <img
           src="assets/uploads/barstool-store.svg"
@@ -328,7 +326,7 @@
         <img src="assets/uploads/menshealth.svg" alt="menshealth logo" />
         <img src="assets/uploads/mrbeast.svg" alt="mrbeast logo" />
       </div>
-      <div class="logos">
+      <div class="partnership__logos">
         <img src="assets/uploads/3m.svg" alt="3m logo" />
         <img
           src="assets/uploads/barstool-store.svg"
@@ -346,22 +344,26 @@
     <div id="footer">
       <div class="footer-nav">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#container-2">Work</a></li>
-          <li><a href="#partnership">Partnership</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a class="footer__links" href="#">Home</a></li>
+          <li><a class="footer__links" href="#feature__section">Work</a></li>
+          <li><a class="footer__links" href="#partnership">Partnership</a></li>
+          <li><a class="footer__links" href="#footer">Contact</a></li>
         </ul>
       </div>
-      <div class="information">
+      <div class="footer__information">
         <h3>Contact Information</h3>
-        <p>1234 Street Name, City, Country</p>
-        <p>Phone: (123) 456-7890</p>
-        <p>Email: info@company.com</p>
+        <address>1234 Street Name, City, Country</address>
+        <p><a class="contact" href="tel:(123) 456-7890">(123) 456-7890</a></p>
+        <p>
+          Email:<a class="contact" href="mailto:info@company.com">
+            info@company.com</a
+          >
+        </p>
       </div>
-      <div class="links">
-        <a href="https://www.facebook.com/">Facebook</a>
-        <a href="https://www.facebook.com/">Twitter</a>
-        <a href="https://www.facebook.com/">LinkedIn</a>
+      <div class="footer__social-links">
+        <a class="footer__links" href="https://www.facebook.com/">Facebook</a>
+        <a class="footer__links" href="https://www.facebook.com/">Twitter</a>
+        <a class="footer__links" href="https://www.facebook.com/">LinkedIn</a>
       </div>
       <p class="copyright">&copy; 2025 LDS</p>
     </div>

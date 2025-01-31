@@ -27,107 +27,120 @@ a {
 
 @font-face {
   font-family: "lexendGiga";
-  src: url(../fonts/LexendGiga-Light.ttf) format("ttf"),
-    url(../fonts/NotoSerif_Condensed-ExtraLight.woff) format("woff");
+  src: url("../fonts/LexendGiga-Light.ttf") format("truetype"),
+    url("../fonts/NotoSerif_Condensed-ExtraLight.woff") format("woff");
 }
 
 .header {
   display: inline-block;
   width: 100%;
-  height: 10%;
   padding-top: 10px;
   background-color: var.$bg-color;
 }
 
-.head-div {
+.header__container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-nav {
-  width: 50%;
-}
-
-nav > ul {
-  display: flex;
   justify-content: space-around;
 }
 
-nav > ul li {
-  display: inline-block;
+.header__logo-section {
   position: relative;
-  list-style: none;
-  font-size: 20px;
-  font-weight: normal;
-  padding-right: 45px;
-  font-family: "lexendGiga";
+  // border: 1px solid red;
+  margin-right: 100px;
 }
 
-nav a {
-  color: #000000;
-  display: block;
-  padding: 10px 15px;
-  transition: color 0.3s ease;
+.header__logo-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%;
+  height: 100%;
+  min-width: 50px;
+  min-height: 60px;
 }
 
-nav a:hover {
-  color: rgb(207, 233, 206);
+.header__logo {
+  @include frame(10%, 20%);
+  min-width: 50px;
+  min-height: 60px;
 }
 
-.dropdown {
+.header__nav {
+  // border: 1px solid red;
+  display: flex;
+  justify-content: space-around;
+
+  li {
+    display: inline-block;
+    position: relative;
+    list-style: none;
+    font-size: 20px;
+    font-weight: normal;
+    padding-right: 20px;
+    font-family: "lexendGiga";
+  }
+
+  a {
+    color: #000000;
+    display: block;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: rgb(207, 233, 206);
+    }
+  }
+}
+
+.nav__dropdown {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 103%;
   left: 0;
   background-color: var.$bg-color;
   border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  min-width: auto;
+  // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  // min-width: auto;
   padding: 10px 0;
   z-index: 1000;
-  border: 2px solid red;
 }
 
-nav > ul li:hover .dropdown {
+.header__nav li:hover .nav__dropdown {
   display: block;
 }
 
-.dropdown li {
-  padding: 10px;
+.nav__dropdown li {
+  padding: 8px;
   white-space: nowrap;
 }
 
-.dropdown li a {
+.nav__dropdown li a {
   padding: 0 15px;
   color: #333;
   transition: background-color 0.3s ease;
 }
 
-.dropdown li a:hover {
+.nav__dropdown li a:hover {
   background-color: rgb(207, 233, 206);
+  color: #333;
 }
 
-.company-logo {
-  @include frame(10%, 20%);
-  margin-left: 20px;
-}
-
-#container-1 {
+#gallery__banner {
   @include box(column);
+  margin-bottom: 40px;
 }
 
 .swiper-container {
   width: 100%;
   position: relative;
-  margin-bottom: 40px;
 }
 
 .swiper-slide-content img {
-  max-width: auto;
+  max-width: 1366px;
   max-height: 900px;
   width: 100%;
-  height: 600px;
+  height: 780px;
 }
 
 #article-aside {
@@ -144,11 +157,11 @@ nav > ul li:hover .dropdown {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.6;
 
     h2 {
-      font-size: 2rem;
+      font-size: 32px;
       margin-bottom: 20px;
       color: #333;
     }
@@ -170,7 +183,7 @@ nav > ul li:hover .dropdown {
     border-radius: 8px;
 
     h3 {
-      font-size: 1.5rem;
+      font-size: 24px;
       color: #333;
       margin-bottom: 20px;
     }
@@ -185,7 +198,7 @@ nav > ul li:hover .dropdown {
         a {
           color: #007bff;
           text-decoration: none;
-          font-size: 1rem;
+          font-size: 16px;
 
           &:hover {
             text-decoration: underline;
@@ -199,11 +212,12 @@ nav > ul li:hover .dropdown {
 .work,
 .team {
   font-size: 50px;
-  padding: 30px 0 30px 520px;
+  padding: 30px 0;
+  text-align: center;
   color: var.$primary-color;
 }
 
-#container-2 {
+#feature__section {
   @include box(column);
 
   img {
@@ -251,24 +265,24 @@ nav > ul li:hover .dropdown {
   }
 }
 
-.data-scientist h2,
-.qa h2 {
+.container2__title {
   left: 40px;
   right: 0;
+  width: 350px !important;
 }
 
-.member {
+.members {
   display: flex;
   background-color: #666161;
   justify-content: space-around;
   margin-bottom: 20px;
 
-  .person {
+  .member {
     background-color: #585656;
     padding: 0 20px;
     position: relative;
 
-    .person-link {
+    .member-link {
       position: absolute;
       top: 0;
       left: 0;
@@ -396,17 +410,17 @@ nav > ul li:hover .dropdown {
   }
 }
 
-.logos {
+.partnership__logos {
   animation: 5s slide infinite linear;
 }
 
-#partnership:hover .logos {
+#partnership:hover .partnership__logos {
   animation-play-state: paused;
 }
 
-.logos img {
+.partnership__logos img {
   height: 50px;
-  margin: 0 30px;
+  margin-left: 60px;
 }
 
 #footer {
@@ -421,7 +435,6 @@ nav > ul li:hover .dropdown {
 
   .footer-nav {
     ul {
-      list-style: none;
       padding: 0;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -429,25 +442,26 @@ nav > ul li:hover .dropdown {
       color: #000000;
     }
 
-    ul li,
-    .links a {
-      font-size: 1rem;
+    ul li {
+      font-size: 16px;
       margin-bottom: 10px;
       color: #000;
-      text-decoration: none;
     }
+  }
 
-    ul li a:hover,
-    .links a:hover {
+  .footer__links {
+    color: #000;
+
+    &:hover {
       color: rgb(207, 233, 206);
     }
   }
 
-  .information {
-    font-size: 1rem;
+  .footer__information {
+    font-size: 16px;
 
     h3 {
-      font-size: 1.2rem;
+      font-size: 19px;
       margin-bottom: 10px;
     }
 
@@ -456,25 +470,21 @@ nav > ul li:hover .dropdown {
     }
   }
 
-  .links {
+  .contact {
+    color: #000;
+  }
+
+  .footer__social-links {
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 33%;
-
-    a {
-      color: #000;
-
-      &:hover {
-        color: rgb(207, 233, 206);
-      }
-    }
   }
 
   .copyright {
     grid-column: span 4;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 14.4px;
     margin-top: 20px;
     color: #000;
   }

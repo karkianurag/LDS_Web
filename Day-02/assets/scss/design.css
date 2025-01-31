@@ -24,108 +24,114 @@ a {
 
 @font-face {
   font-family: "lexendGiga";
-  src: url(../fonts/LexendGiga-Light.ttf) format("ttf"), url(../fonts/NotoSerif_Condensed-ExtraLight.woff) format("woff");
+  src: url("../fonts/LexendGiga-Light.ttf") format("truetype"), url("../fonts/NotoSerif_Condensed-ExtraLight.woff") format("woff");
 }
 .header {
   display: inline-block;
   width: 100%;
-  height: 10%;
   padding-top: 10px;
   background-color: rgb(16, 212, 180);
 }
 
-.head-div {
+.header__container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-nav {
-  width: 50%;
-}
-
-nav > ul {
-  display: flex;
   justify-content: space-around;
 }
 
-nav > ul li {
+.header__logo-section {
+  position: relative;
+  margin-right: 100px;
+}
+
+.header__logo-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%;
+  height: 100%;
+  min-width: 50px;
+  min-height: 60px;
+}
+
+.header__logo {
+  width: 10%;
+  height: 20%;
+  min-width: 50px;
+  min-height: 60px;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-around;
+}
+.header__nav li {
   display: inline-block;
   position: relative;
   list-style: none;
   font-size: 20px;
   font-weight: normal;
-  padding-right: 45px;
+  padding-right: 20px;
   font-family: "lexendGiga";
 }
-
-nav a {
+.header__nav a {
   color: #000000;
   display: block;
   padding: 10px 15px;
   transition: color 0.3s ease;
 }
-
-nav a:hover {
+.header__nav a:hover {
   color: rgb(207, 233, 206);
 }
 
-.dropdown {
+.nav__dropdown {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 103%;
   left: 0;
   background-color: rgb(16, 212, 180);
   border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  min-width: auto;
   padding: 10px 0;
   z-index: 1000;
-  border: 2px solid red;
 }
 
-nav > ul li:hover .dropdown {
+.header__nav li:hover .nav__dropdown {
   display: block;
 }
 
-.dropdown li {
-  padding: 10px;
+.nav__dropdown li {
+  padding: 8px;
   white-space: nowrap;
 }
 
-.dropdown li a {
+.nav__dropdown li a {
   padding: 0 15px;
   color: #333;
   transition: background-color 0.3s ease;
 }
 
-.dropdown li a:hover {
+.nav__dropdown li a:hover {
   background-color: rgb(207, 233, 206);
+  color: #333;
 }
 
-.company-logo {
-  width: 10%;
-  height: 20%;
-  margin-left: 20px;
-}
-
-#container-1 {
+#gallery__banner {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  margin-bottom: 40px;
 }
 
 .swiper-container {
   width: 100%;
   position: relative;
-  margin-bottom: 40px;
 }
 
 .swiper-slide-content img {
-  max-width: auto;
+  max-width: 1366px;
   max-height: 900px;
   width: 100%;
-  height: 600px;
+  height: 780px;
 }
 
 #article-aside {
@@ -142,11 +148,11 @@ nav > ul li:hover .dropdown {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.6;
 }
 #article-aside .main-article h2 {
-  font-size: 2rem;
+  font-size: 32px;
   margin-bottom: 20px;
   color: #333;
 }
@@ -164,7 +170,7 @@ nav > ul li:hover .dropdown {
   border-radius: 8px;
 }
 #article-aside .related-info h3 {
-  font-size: 1.5rem;
+  font-size: 24px;
   color: #333;
   margin-bottom: 20px;
 }
@@ -178,7 +184,7 @@ nav > ul li:hover .dropdown {
 #article-aside .related-info ul li a {
   color: #007bff;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 16px;
 }
 #article-aside .related-info ul li a:hover {
   text-decoration: underline;
@@ -187,20 +193,21 @@ nav > ul li:hover .dropdown {
 .work,
 .team {
   font-size: 50px;
-  padding: 30px 0 30px 520px;
+  padding: 30px 0;
+  text-align: center;
   color: black;
 }
 
-#container-2 {
+#feature__section {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
-#container-2 img {
+#feature__section img {
   width: 50%;
   border-radius: 5%;
 }
-#container-2 h2 {
+#feature__section h2 {
   position: relative;
   top: 70px;
   left: 100px;
@@ -208,7 +215,7 @@ nav > ul li:hover .dropdown {
   width: 400px;
   color: rgb(201, 29, 29);
 }
-#container-2 p {
+#feature__section p {
   position: relative;
   width: 400px;
   font-size: 25px;
@@ -225,7 +232,7 @@ nav > ul li:hover .dropdown {
   justify-content: flex-start;
   justify-content: space-around;
   background-color: rgb(16, 212, 180);
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 #reverse,
@@ -243,24 +250,24 @@ nav > ul li:hover .dropdown {
   right: 50px;
 }
 
-.data-scientist h2,
-.qa h2 {
+.container2__title {
   left: 40px;
   right: 0;
+  width: 350px !important;
 }
 
-.member {
+.members {
   display: flex;
   background-color: #666161;
   justify-content: space-around;
   margin-bottom: 20px;
 }
-.member .person {
+.members .member {
   background-color: #585656;
   padding: 0 20px;
   position: relative;
 }
-.member .person .person-link {
+.members .member .member-link {
   position: absolute;
   top: 0;
   left: 0;
@@ -383,17 +390,17 @@ nav > ul li:hover .dropdown {
     transform: translateX(-100%);
   }
 }
-.logos {
+.partnership__logos {
   animation: 5s slide infinite linear;
 }
 
-#partnership:hover .logos {
+#partnership:hover .partnership__logos {
   animation-play-state: paused;
 }
 
-.logos img {
+.partnership__logos img {
   height: 50px;
-  margin: 0 30px;
+  margin-left: 60px;
 }
 
 #footer {
@@ -407,50 +414,46 @@ nav > ul li:hover .dropdown {
   width: 100%;
 }
 #footer .footer-nav ul {
-  list-style: none;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   color: #000000;
 }
-#footer .footer-nav ul li,
-#footer .footer-nav .links a {
-  font-size: 1rem;
+#footer .footer-nav ul li {
+  font-size: 16px;
   margin-bottom: 10px;
   color: #000;
-  text-decoration: none;
 }
-#footer .footer-nav ul li a:hover,
-#footer .footer-nav .links a:hover {
+#footer .footer__links {
+  color: #000;
+}
+#footer .footer__links:hover {
   color: rgb(207, 233, 206);
 }
-#footer .information {
-  font-size: 1rem;
+#footer .footer__information {
+  font-size: 16px;
 }
-#footer .information h3 {
-  font-size: 1.2rem;
+#footer .footer__information h3 {
+  font-size: 19px;
   margin-bottom: 10px;
 }
-#footer .information p {
+#footer .footer__information p {
   margin-bottom: 8px;
 }
-#footer .links {
+#footer .contact {
+  color: #000;
+}
+#footer .footer__social-links {
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 33%;
 }
-#footer .links a {
-  color: #000;
-}
-#footer .links a:hover {
-  color: rgb(207, 233, 206);
-}
 #footer .copyright {
   grid-column: span 4;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 14.4px;
   margin-top: 20px;
   color: #000;
 }/*# sourceMappingURL=design.css.map */

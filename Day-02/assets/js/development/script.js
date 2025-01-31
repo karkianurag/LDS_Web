@@ -1,7 +1,8 @@
 const swiper = new Swiper(".swiper-container", {
   loop: true, // Infinite loop
-  slidesPerView: 1, // Number of visible slides
-  spaceBetween: 30, // Space between slides
+  // Number of visible slides
+  slidesPerView: "auto",
+  spaceBetween: 0, // Space between slides
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -15,5 +16,5 @@ const swiper = new Swiper(".swiper-container", {
 // Initialize Fancybox
 Fancybox.bind('[data-fancybox="gallery"]', {
   // Options for Fancybox (if needed)
-  //   infinite: true, // Allow cycling through content in the lightbox
+  infinite: true, // Allow cycling through content in the lightbox
 });
