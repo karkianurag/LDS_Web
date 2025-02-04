@@ -72,15 +72,15 @@ a {
   font-size: 20px;
   font-weight: normal;
   padding-right: 20px;
-  font-family: "lexendGiga";
+  font-family: "lexendGiga", sans-serif;
 }
-.header__nav a {
+.header__nav li a {
   color: #000000;
   display: block;
   padding: 10px 15px;
   transition: color 0.3s ease;
 }
-.header__nav a:hover {
+.header__nav li a:hover {
   color: rgb(207, 233, 206);
 }
 
@@ -134,7 +134,7 @@ a {
   height: 780px;
 }
 
-#article-aside {
+#article__aside {
   display: flex;
   gap: 40px;
   padding: 40px 5%;
@@ -143,7 +143,7 @@ a {
   border-radius: 5px;
   background-color: black;
 }
-#article-aside .main-article {
+#article__aside .main-article {
   flex: 2;
   background-color: #fff;
   padding: 20px;
@@ -151,42 +151,42 @@ a {
   font-size: 16px;
   line-height: 1.6;
 }
-#article-aside .main-article h2 {
+#article__aside .article__header {
   font-size: 32px;
   margin-bottom: 20px;
   color: #333;
 }
-#article-aside .main-article p {
+#article__aside .article__content {
   margin-bottom: 15px;
   color: #555;
 }
-#article-aside .main-article p:last-child {
+#article__aside .article__content:last-child {
   margin-bottom: 0;
 }
-#article-aside .related-info {
+#article__aside .aside__info {
   flex: 1;
   background-color: #f8f8f8;
   padding: 20px;
   border-radius: 8px;
 }
-#article-aside .related-info h3 {
+#article__aside .aside__info .aside__header {
   font-size: 24px;
   color: #333;
   margin-bottom: 20px;
 }
-#article-aside .related-info ul {
+#article__aside .aside__info .aside__list {
   list-style-type: none;
   padding: 0;
 }
-#article-aside .related-info ul li {
+#article__aside .aside__info .aside__list li {
   margin-bottom: 10px;
 }
-#article-aside .related-info ul li a {
+#article__aside .aside__info .aside__list li a {
   color: #007bff;
   text-decoration: none;
   font-size: 16px;
 }
-#article-aside .related-info ul li a:hover {
+#article__aside .aside__info .aside__list li a:hover {
   text-decoration: underline;
 }
 
@@ -203,11 +203,11 @@ a {
   flex-direction: column;
   justify-content: flex-start;
 }
-#feature__section img {
+#feature__section .feature__image {
   width: 50%;
   border-radius: 5%;
 }
-#feature__section h2 {
+#feature__section .position {
   position: relative;
   top: 70px;
   left: 100px;
@@ -215,7 +215,7 @@ a {
   width: 400px;
   color: rgb(201, 29, 29);
 }
-#feature__section p {
+#feature__section .feature__description {
   position: relative;
   width: 400px;
   font-size: 25px;
@@ -239,21 +239,21 @@ a {
 .reversed {
   flex-direction: row-reverse;
 }
-#reverse h2,
-.reversed h2 {
+#reverse .position,
+.reversed .position {
   position: relative;
   left: 0;
   width: 350px;
 }
-#reverse p,
-.reversed p {
+#reverse .feature__description,
+.reversed .feature__description {
   right: 50px;
 }
 
 .container2__title {
   left: 40px;
   right: 0;
-  width: 350px !important;
+  width: 350px;
 }
 
 .members {
@@ -275,7 +275,7 @@ a {
   height: 100%;
 }
 
-.profile-container {
+.profile__container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -287,7 +287,7 @@ a {
   margin: 0 auto;
 }
 
-.profile-img {
+.profile__img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -296,11 +296,11 @@ a {
   border: 4px solid #666161;
 }
 
-.profile-content {
+.profile__content {
   max-width: 400px;
 }
 
-.profile-content h3 {
+.profile__title {
   font-size: 24px;
   font-weight: bold;
   color: #333;
@@ -348,18 +348,18 @@ a {
   border-radius: 4px;
   margin-bottom: 30px;
 }
-.call h2 {
+.call .cta__header {
   font-size: 2.5rem;
   margin-bottom: 20px;
   color: #000;
-  font-family: "LexendGiga";
+  font-family: "LexendGiga", sans-serif;
 }
-.call p {
+.call .cta__content {
   font-size: 1.2rem;
   margin-bottom: 30px;
   color: #000;
 }
-.call button {
+.call .cta__button {
   padding: 15px 30px;
   font-size: 1.1rem;
   background-color: black;
@@ -368,7 +368,7 @@ a {
   border-radius: 5px;
   cursor: pointer;
 }
-.call button:hover {
+.call .cta__button:hover {
   transform: scale(1.1);
 }
 
@@ -398,7 +398,7 @@ a {
   animation-play-state: paused;
 }
 
-.partnership__logos img {
+.partnership__image {
   height: 50px;
   margin-left: 60px;
 }
@@ -410,19 +410,21 @@ a {
   padding: 40px 10%;
   background-color: rgb(16, 212, 180);
   color: black;
-  font-family: "LexendGiga";
+  font-family: "LexendGiga", sans-serif;
   width: 100%;
 }
-#footer .footer-nav ul {
+#footer .footer__list {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   color: #000000;
 }
-#footer .footer-nav ul li {
+#footer .footer__list li {
   font-size: 16px;
   margin-bottom: 10px;
+}
+#footer .footer__list li a {
   color: #000;
 }
 #footer .footer__links {
@@ -434,11 +436,12 @@ a {
 #footer .footer__information {
   font-size: 16px;
 }
-#footer .footer__information h3 {
+#footer .footer__information .contact__info {
   font-size: 19px;
   margin-bottom: 10px;
 }
-#footer .footer__information p {
+#footer .footer__information .contact__phone,
+#footer .footer__information .contact__email {
   margin-bottom: 8px;
 }
 #footer .contact {
