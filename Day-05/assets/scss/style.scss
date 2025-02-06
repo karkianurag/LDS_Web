@@ -67,12 +67,13 @@ button {
   max-width: 1210px;
   margin: 0 auto;
   // border: 1px solid red;
-  padding: 20px 0;
+  padding: 20px 20px;
   position: relative;
 }
 
 .heading__wrapper {
   max-width: 629px;
+  width: 70%;
   // border: 3px solid blue;
 }
 
@@ -81,6 +82,10 @@ button {
   line-height: 120%;
   letter-spacing: -2px;
   padding-bottom: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
 }
 
 .heading__content {
@@ -88,10 +93,16 @@ button {
   font-weight: 500;
   line-height: 120%;
   color: #4c5175;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 .heading__content__link {
   color: #ff1c9d;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
 
   &:hover {
     color: #17293e;
@@ -104,7 +115,7 @@ button {
   display: inline-block;
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 20px;
 }
 
 .icon {
@@ -113,14 +124,19 @@ button {
   height: 40px;
   background: none;
   // stroke-width: 0;
-  // stroke: #ff1c9d;
+  stroke: #ff1c9d;
   fill: #fff;
 
   &:hover {
     cursor: pointer;
-    background-color: #ff1c9d;
-    border-radius: 30%;
+    fill: #ff1c9d33;
+    stroke: #ff1c9d;
   }
+
+  // @media (max-width: 768px) {
+  //   width: 30px;
+  //   height: 30px;
+  // }
 }
 
 .team {
@@ -129,6 +145,18 @@ button {
   max-width: 1210px;
   margin: 10px auto;
   gap: 14px;
+  padding: 0 20px;
+
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .team__member {
@@ -154,13 +182,21 @@ button {
   &:hover::after {
     opacity: 1;
   }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    height: auto;
+  }
 }
 .team__image {
   width: 100%;
   max-width: 282px;
   height: auto;
-  // border: 10px solid red;
-  // margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .team__member__name {
@@ -174,11 +210,12 @@ button {
   font-weight: 500;
   line-height: 130%;
   letter-spacing: -0.25px;
+  max-width: 250px;
 }
 
 .news {
   max-width: 1210px;
-  padding: 80px 20px;
+  padding: 40px 20px;
   margin: 0 auto;
   // border: 10px solid #e5e5e5;
   // margin-bottom: 30px;
@@ -193,6 +230,7 @@ button {
   display: flex;
   flex-direction: column-reverse;
   max-width: 598px;
+  padding-bottom: 30px;
 
   // @media (max-width: 768px) {
   //   flex-direction: column;
@@ -219,13 +257,15 @@ button {
 
 .news__article {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  // align-items: center;
   flex-wrap: wrap;
   gap: 40px;
 
-  // @media (max-width: 768px) {
-  //   flex-direction: column;
-  // }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 // .news__main {
@@ -572,6 +612,7 @@ button {
   }
   &:hover {
     cursor: pointer;
+    fill: #ff1c9d;
   }
 }
 

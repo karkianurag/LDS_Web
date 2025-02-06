@@ -61,12 +61,13 @@ button {
 .heading {
   max-width: 1210px;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 20px 20px;
   position: relative;
 }
 
 .heading__wrapper {
   max-width: 629px;
+  width: 70%;
 }
 
 .heading__title {
@@ -75,6 +76,11 @@ button {
   letter-spacing: -2px;
   padding-bottom: 10px;
 }
+@media (max-width: 768px) {
+  .heading__title {
+    font-size: 30px;
+  }
+}
 
 .heading__content {
   font-size: 18px;
@@ -82,9 +88,17 @@ button {
   line-height: 120%;
   color: #4c5175;
 }
+@media (max-width: 768px) {
+  .heading__content {
+    font-size: 14px;
+  }
+}
 
 .heading__content__link {
   color: #ff1c9d;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
 }
 .heading__content__link:hover {
   color: #17293e;
@@ -95,7 +109,7 @@ button {
   display: inline-block;
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 20px;
 }
 
 .icon {
@@ -103,12 +117,13 @@ button {
   width: 40px;
   height: 40px;
   background: none;
+  stroke: #ff1c9d;
   fill: #fff;
 }
 .icon:hover {
   cursor: pointer;
-  background-color: #ff1c9d;
-  border-radius: 30%;
+  fill: rgba(255, 28, 157, 0.2);
+  stroke: #ff1c9d;
 }
 
 .team {
@@ -117,6 +132,20 @@ button {
   max-width: 1210px;
   margin: 10px auto;
   gap: 14px;
+  padding: 0 20px;
+}
+@media (max-width: 768px) {
+  .team {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .team__member {
@@ -139,11 +168,23 @@ button {
 .team__member:hover::after {
   opacity: 1;
 }
+@media (max-width: 768px) {
+  .team__member {
+    max-width: 100%;
+    height: auto;
+  }
+}
 
 .team__image {
   width: 100%;
   max-width: 282px;
   height: auto;
+}
+@media (max-width: 768px) {
+  .team__image {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .team__member__name {
@@ -157,11 +198,12 @@ button {
   font-weight: 500;
   line-height: 130%;
   letter-spacing: -0.25px;
+  max-width: 250px;
 }
 
 .news {
   max-width: 1210px;
-  padding: 80px 20px;
+  padding: 40px 20px;
   margin: 0 auto;
 }
 
@@ -169,6 +211,7 @@ button {
   display: flex;
   flex-direction: column-reverse;
   max-width: 598px;
+  padding-bottom: 30px;
 }
 
 .news__info {
@@ -189,9 +232,15 @@ button {
 
 .news__article {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
+}
+@media (max-width: 768px) {
+  .news__article {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .news__main-image-wrapper {
@@ -447,6 +496,7 @@ button {
 }
 .footer__social-icon:hover {
   cursor: pointer;
+  fill: #ff1c9d;
 }
 
 .footer__right {
