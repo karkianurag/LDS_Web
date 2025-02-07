@@ -63,10 +63,106 @@ button {
   border: none;
 }
 
+.hero {
+  max-width: 100%;
+  height: 638px;
+  background-image: linear-gradient(to left, #16174880 0%, #000000 100%),
+    url(../uploads/image\ 5.jpg);
+  // display: flex;
+  position: relative;
+}
+
+.myswiper2 {
+  width: 100%;
+  position: relative;
+
+  .swiper-slide {
+    max-height: 384px;
+  }
+
+  // border: 2px solid red;
+}
+
+.hero__profile-wrapper {
+  // margin-left: 135px;
+  max-width: 650px;
+  // border: 3px solid red;
+  position: absolute;
+  top: 120px;
+  left: 10%;
+}
+
+.hero__content-wrapper {
+  margin-bottom: 30px;
+}
+
+.hero__heading {
+  font-size: 70px;
+  line-height: 110%;
+  letter-spacing: -2px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.hero__content {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+.hero__action {
+  display: inline;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  background-color: #ff1c9d;
+
+  padding: 15px 45px;
+  max-width: 240px;
+}
+
+.hero__button {
+  background-color: #ff1c9d;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  padding-right: 20px;
+
+  &:hover {
+    color: #17293e;
+    cursor: pointer;
+  }
+}
+
+.myswiper {
+  position: absolute;
+  bottom: 50px;
+  right: 130px;
+  max-width: 510px;
+  gap: 15px;
+  border: 3px solid blue;
+}
+
+.hero__thumbnail {
+  max-width: 160px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.hero__thumbnail-info {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  padding-top: 30px;
+}
+
 .heading {
   max-width: 1210px;
   margin: 0 auto;
-  border: 1px solid red;
   padding: 20px 20px;
   position: relative;
 }
@@ -169,6 +265,7 @@ button {
 .swiper-container {
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .team__member {
@@ -289,7 +386,8 @@ button {
   padding: 0 20px;
   margin: 40px auto;
   position: relative;
-  background-image: url("../uploads/image(4).png");
+  background-image: linear-gradient(to bottom, #12398580 0%, #17293e 100%),
+    url("../uploads/image(4).png");
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
