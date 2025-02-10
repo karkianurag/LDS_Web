@@ -54,6 +54,7 @@ h3 {
 body {
   font-family: Inter, sans-serif;
   background-color: #fff;
+  // overflow: hidden;
 }
 
 button {
@@ -64,16 +65,23 @@ button {
 }
 
 .hero {
-  max-width: 100%;
+  width: 100%;
   height: 638px;
   background-image: linear-gradient(to left, #16174880 0%, #000000 100%),
     url(../uploads/image\ 5.jpg);
-  // display: flex;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+
+  // object-fit: contain;
+  display: flex;
+  flex-direction: column;
   position: relative;
 }
 
 .myswiper2 {
   width: 100%;
+  height: 80%;
   position: relative;
 
   .swiper-slide {
@@ -94,6 +102,10 @@ button {
 
 .hero__content-wrapper {
   margin-bottom: 30px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 15px;
+  }
 }
 
 .hero__heading {
@@ -102,6 +114,14 @@ button {
   letter-spacing: -2px;
   color: #fff;
   margin-bottom: 15px;
+
+  @media (max-width: 1024px) {
+    font-size: 58px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 48px;
+  }
 }
 
 .hero__content {
@@ -110,11 +130,15 @@ button {
   color: #fff;
   line-height: 150%;
   letter-spacing: 0;
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
 }
 
 .hero__action {
   display: inline;
-  border-radius: 15px;
+  border-radius: 35px;
   display: flex;
   align-items: center;
   background-color: #ff1c9d;
@@ -137,12 +161,14 @@ button {
 }
 
 .myswiper {
-  position: absolute;
-  bottom: 50px;
-  right: 130px;
+  // position: absolute;
+  // bottom: 50px;
+  // right: 130px;
   max-width: 510px;
-  gap: 15px;
-  border: 3px solid blue;
+  // height:20%;
+  // border: 3px solid blue;
+  align-self: flex-end;
+  margin-right: 50px;
 }
 
 .hero__thumbnail {
@@ -150,6 +176,35 @@ button {
 
   &:hover {
     cursor: pointer;
+  }
+}
+
+.hero__progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  max-width: 150px;
+
+  background-color: #ffffff27;
+  // background-color: #ff1c9d;
+  // transition: width 0.3s ease;
+}
+
+.hero__progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(to right, #ff1c9d 0%, #ff1c9d 100%);
+  width: 0%;
+  // transition: width 2.5s ease;
+}
+
+@keyframes fillProgressBar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
   }
 }
 
@@ -790,6 +845,7 @@ button {
 
 .footer__center-box {
   margin-bottom: 30px;
+  // border: 5px solid red;
 }
 
 .footer__center-title {
@@ -811,10 +867,15 @@ button {
   margin: 10px 0;
   padding: 0 18px;
   margin-right: 18px;
-  // max-width: 275px;
   border-radius: 15px;
   display: flex;
   align-items: center;
+  // border: 10px solid red;
+
+  @media (max-width: 768px) {
+    margin: 0 auto;
+    max-width: 275px;
+  }
 }
 
 .footer__center-button {
@@ -827,13 +888,15 @@ button {
   color: #fff;
   margin-right: 10px;
   border-radius: 5px;
+  // border: 10px solid red;
 
   &:hover {
     color: #ff1c9d;
   }
 
   @media (max-width: 768px) {
-    width: 100%;
+    // width: 100%;
+    // margin: 0 auto;
     padding: 15px;
   }
 }
