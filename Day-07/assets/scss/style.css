@@ -49,6 +49,7 @@ h3 {
 body {
   font-family: Inter, sans-serif;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 button {
@@ -407,6 +408,107 @@ button {
   gap: 15px;
 }
 
+.achievements {
+  max-width: 1210px;
+  padding: 0 20px;
+  margin: 20px auto;
+  display: flex;
+  gap: 95px;
+}
+
+.achievements__header {
+  flex: 1;
+  max-width: 344px;
+}
+
+.achievements__title {
+  font-size: 46px;
+  line-height: 120%;
+  letter-spacing: -2px;
+  margin-bottom: 27px;
+}
+
+.achievements__action {
+  max-width: 324px;
+  display: flex;
+  align-items: center;
+  padding: 15px 40px;
+  border: 2px solid #ff1c9d;
+  border-radius: 40px;
+}
+.achievements__action:hover {
+  background-color: #ff1c9d;
+  color: #fff;
+  cursor: pointer;
+}
+.achievements__action:hover .icon-Vector-1, .achievements__action:hover .achievements__button {
+  fill: #fff;
+  background-color: #ff1c9d;
+  color: #fff;
+}
+
+.achievements__button {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #ff1c9d;
+  margin-right: 20px;
+  background-color: #fff;
+}
+.achievements__button:hover {
+  cursor: pointer;
+}
+
+.icon-Vector-1--pink {
+  fill: #ff1c9d;
+}
+
+.achievements__section {
+  flex: 1;
+}
+
+.achievements__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 20px;
+  margin-bottom: 10px;
+  background-color: rgba(13, 41, 88, 0.1);
+  filter: drop-shadow(0 10px 25px 0 rgba(23, 41, 62, 0.05));
+  border-radius: 15px;
+}
+.achievements__item:hover {
+  background-color: rgba(255, 28, 157, 0.2274509804);
+  cursor: pointer;
+}
+.achievements__item:hover .achievements__content {
+  font-weight: 700;
+}
+
+.achievement__icon {
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  stroke-width: 0;
+  fill: #ff1c9d;
+}
+
+.achievements__info {
+  padding: 10px;
+}
+
+.achievements__date {
+  font-size: 15px;
+  margin-right: 15px;
+}
+
+.achievements__content {
+  display: inline-block;
+  font-size: 15px;
+  line-height: 130%;
+}
+
 .cta {
   max-width: 1210px;
   height: 410px;
@@ -763,13 +865,16 @@ button {
   height: 18px;
   stroke-width: 0;
   stroke: #fff;
-  fill: #fff;
 }
 .icon-Vector-1:hover {
   cursor: pointer;
   stroke: green;
   stroke-width: 1.5;
   fill: purple;
+}
+
+.icon-Vector-1--white {
+  fill: #fff;
 }
 
 .footer__center-box-title {

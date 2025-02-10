@@ -64,7 +64,7 @@ function updateProgressBar(swiperInstance) {
 }
 
 const swiper3 = new Swiper(".swiper-container", {
-  loop: false,
+  loop: true,
 
   slidesPerView: 1,
   spaceBetween: 20,
