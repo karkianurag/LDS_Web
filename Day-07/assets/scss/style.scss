@@ -469,7 +469,7 @@ button {
 .achievements__header {
   display: flex;
   justify-content: space-between;
-  border: 3px solid red;
+  // border: 3px solid red;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -507,6 +507,122 @@ button {
   line-height: 160%;
   font-weight: 500;
   align-self: flex-end;
+}
+
+.achievements__section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  // border: 3px solid red;
+  margin: 30px 0;
+  gap: 30px;
+}
+
+.achievements__section-item {
+  max-width: 370px;
+  height: 560px;
+  // border: 3px solid green;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 30px;
+}
+
+.achivements__section-image1 {
+  background: linear-gradient(to bottom, #ff1c9d1e 0%, #000000 100%),
+    url(../uploads/image\(5\).png);
+}
+
+.achivements__section-image2 {
+  background: linear-gradient(to bottom, #ff1c9d1e 0%, #000000 100%),
+    url(../uploads/image\(6\).png);
+}
+
+.achivements__section-image3 {
+  background: linear-gradient(to bottom, #ff1c9d1e 0%, #000000 100%),
+    url(../uploads/image\ 5.jpg);
+  background-size: 200% 100%;
+  background-position: 55% 100%;
+  background-repeat: no-repeat;
+  // background-attachment: fixed;
+}
+
+.icon-Medal-First-Place-1 {
+  display: inline-block;
+  width: 34.5px;
+  height: 36.65px;
+  stroke-width: 0;
+  // stroke: currentColor;
+  fill: #fff;
+}
+
+.icon-Graduation-Cap-1 {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  stroke-width: 0;
+  // stroke: currentColor;
+  fill: #fff;
+}
+
+.icon-Trophy-1 {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  stroke-width: 0;
+  // stroke: currentColor;
+  fill: #fff;
+}
+
+.achievements__section__title {
+  max-width: 310px;
+  font-size: 32px;
+  color: #fff;
+  line-height: 110%;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.achievements__section__content {
+  font-size: 15px;
+  line-height: 160%;
+  color: #fff;
+  opacity: 0.75;
+}
+
+.achievements__action {
+  max-width: 375px;
+  padding: 15px 40px;
+  border: 1px solid #ff1c9d;
+  border-radius: 40px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: #ff1c9d;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  &:hover .icon-Vector-1,
+  &:hover .achievements__button {
+    fill: #fff;
+    background-color: #ff1c9d;
+    color: #fff;
+  }
+}
+
+.achievements__button {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ff1c9d;
+  margin-right: 20px;
+  background-color: white;
 }
 
 .success {
@@ -590,7 +706,6 @@ button {
   margin-bottom: 10px;
   // border: 3px solid blue;
   background-color: rgba(13, 41, 88, 0.1);
-  filter: drop-shadow(0 10px 25px 0 rgba(23, 41, 62, 0.05));
   border-radius: 15px;
 
   &:hover {
