@@ -1,7 +1,7 @@
 // const progressBars = document.querySelectorAll(".hero__progress-bar");
 
 const swiper1 = new Swiper(".myswiper", {
-  loop: false,
+  loop: true,
 
   slidesPerView: 3,
   spaceBetween: 20,

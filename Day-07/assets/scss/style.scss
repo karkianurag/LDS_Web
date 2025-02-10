@@ -84,9 +84,10 @@ button {
   height: 80%;
   position: relative;
 
-  .swiper-slide {
-    max-height: 384px;
-  }
+  // .swiper-slide {
+  //   // max-height: 384px;
+  //   border: 2px solid red;
+  // }
 
   // border: 2px solid red;
 }
@@ -98,6 +99,16 @@ button {
   position: absolute;
   top: 120px;
   left: 10%;
+
+  @media (max-width: 1440px) {
+    top: 90px;
+    left: 120px;
+  }
+
+  @media (max-width: 1024px) {
+    top: 50px;
+    left: 20px;
+  }
 }
 
 .hero__content-wrapper {
@@ -169,6 +180,15 @@ button {
   // border: 3px solid blue;
   align-self: flex-end;
   margin-right: 50px;
+
+  @media (max-width: 1024px) {
+    max-width: 420px;
+    margin-right: 20px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 320px;
+  }
 }
 
 .hero__thumbnail {
@@ -213,6 +233,10 @@ button {
   font-weight: 600;
   color: #fff;
   padding-top: 30px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 .heading {
@@ -352,6 +376,7 @@ button {
     height: auto;
   }
 }
+
 .team__image {
   width: 100%;
   max-width: 282px;
@@ -438,26 +463,80 @@ button {
 .achievements {
   max-width: 1210px;
   padding: 0 20px;
+  margin: 40px auto;
+}
+
+.achievements__header {
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid red;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+.achievements__header__section {
+  max-width: 598px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 18px;
+
+  @media (max-width: 768px) {
+    gap: 10px;
+  }
+}
+
+.achievements__header__caption {
+  opacity: 0.75;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+.achievements__header__headline {
+  font-size: 46px;
+  line-height: 120%;
+  letter-spacing: -2px;
+}
+
+.achievements__header__info {
+  max-width: 247px;
+  font-size: 15px;
+  line-height: 160%;
+  font-weight: 500;
+  align-self: flex-end;
+}
+
+.success {
+  max-width: 1210px;
+  padding: 0 20px;
   margin: 20px auto;
   // border: 3px solid red;
   display: flex;
   gap: 95px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-.achievements__header {
+.success__header {
   // border: 3px solid blue;
   flex: 1;
   max-width: 344px;
 }
 
-.achievements__title {
+.success__title {
   font-size: 46px;
   line-height: 120%;
   letter-spacing: -2px;
   margin-bottom: 27px;
 }
 
-.achievements__action {
+.success__action {
   max-width: 324px;
   display: flex;
   // justify-content: space-around;
@@ -473,14 +552,14 @@ button {
   }
 
   &:hover .icon-Vector-1,
-  &:hover .achievements__button {
+  &:hover .success__button {
     fill: #fff;
     background-color: #ff1c9d;
     color: #fff;
   }
 }
 
-.achievements__button {
+.success__button {
   font-size: 17px;
   font-weight: 600;
   line-height: 100%;
@@ -498,12 +577,12 @@ button {
   fill: #ff1c9d;
 }
 
-.achievements__section {
+.success__section {
   // border: 3px solid green;
   flex: 1;
 }
 
-.achievements__item {
+.success__item {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -518,12 +597,12 @@ button {
     background-color: #ff1c9d3a;
     cursor: pointer;
   }
-  &:hover .achievements__content {
+  &:hover .success__content {
     font-weight: 700;
   }
 }
 
-.achievement__icon {
+.success__icon {
   display: inline-block;
   width: 33px;
   height: 33px;
@@ -532,16 +611,16 @@ button {
   fill: #ff1c9d;
 }
 
-.achievements__info {
+.success__info {
   padding: 10px;
 }
 
-.achievements__date {
+.success__date {
   font-size: 15px;
   margin-right: 15px;
 }
 
-.achievements__content {
+.success__content {
   display: inline-block;
   font-size: 15px;
   line-height: 130%;
