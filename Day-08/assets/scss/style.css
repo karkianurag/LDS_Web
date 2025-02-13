@@ -72,28 +72,28 @@ button {
 }
 
 .myswiper2 {
-  width: 100%;
   height: 80%;
   position: relative;
 }
+.myswiper2 .swiper-slide {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.swiper__content-container {
+  max-width: 1210px;
+  height: 100%;
+  margin: 0 auto;
+  border: 2px solid red;
+}
 
 .hero__profile-wrapper {
-  max-width: 650px;
-  position: absolute;
-  top: 120px;
-  left: 10%;
-}
-@media (max-width: 1440px) {
-  .hero__profile-wrapper {
-    top: 90px;
-    left: 120px;
-  }
-}
-@media (max-width: 1024px) {
-  .hero__profile-wrapper {
-    top: 50px;
-    left: 20px;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 3px solid red;
 }
 
 .hero__content-wrapper {
@@ -158,8 +158,18 @@ button {
   cursor: pointer;
 }
 
+.thumbs__container {
+  width: 1210px;
+  margin: 0 auto;
+  padding: 0 20px;
+  border: 3px solid red;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .myswiper {
   max-width: 510px;
+  border: 3px solid blue;
   align-self: flex-end;
   margin-right: 50px;
 }
@@ -216,6 +226,137 @@ button {
   .hero__thumbnail-info {
     font-size: 14px;
   }
+}
+
+.about__container {
+  background-image: url(../uploads/image\ 10.jpg), linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.968627451) 46%, rgba(255, 255, 255, 0.9843137255) 100%);
+  background-size: 100% 100%;
+  padding-top: 100px;
+  padding-right: 20px;
+  margin-bottom: 30px;
+}
+
+.info {
+  max-width: 1210px;
+  padding: 0 20px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.info__header {
+  max-width: 870px;
+  text-align: center;
+}
+
+.info__header__section {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.info__heading {
+  margin: 18px 0;
+  font-size: 46px;
+  line-height: 120%;
+  letter-spacing: -2px;
+}
+
+.info__header__caption {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+.info__header__content {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 160%;
+}
+
+.info__section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-self: flex-start;
+  gap: 10px;
+}
+
+.info__section-item {
+  max-width: 376px;
+  border: 1px inset rgba(13, 41, 88, 0.1019607843);
+  background-color: rgba(121, 124, 152, 0.0509803922);
+  padding: 40px 30px;
+  border-radius: 25px;
+}
+
+.icon-People-1 {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  stroke-width: 0;
+  fill: #ff1c9d;
+}
+
+.icon-Mortarboard-1 {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: #ff1c9d;
+}
+
+.icon-Personal-Growth-1 {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: #ff1c9d;
+}
+
+.info__section-title {
+  font-size: 26px;
+  line-height: 110%;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+.info__section__text {
+  font-size: 15px;
+  line-height: 160%;
+}
+
+.info__action {
+  max-width: 260px;
+  padding: 15px 20px;
+  border: 2px solid #ff1c9d;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+}
+.info__action:hover {
+  background-color: #ff1c9d;
+  cursor: pointer;
+}
+.info__action:hover .info__button {
+  color: #fff;
+  background-color: #ff1c9d;
+  cursor: pointer;
+}
+.info__action:hover .icon-Vector-1 {
+  fill: #fff;
+}
+
+.info__button {
+  font-size: 18px;
+  color: #ff1c9d;
+  font-weight: 600;
+  letter-spacing: 0px;
+  background-color: #fff;
+  margin-right: 20px;
 }
 
 .heading {
@@ -288,9 +429,9 @@ button {
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
   cursor: pointer;
-  fill: #000;
-  stroke: #ff1c9d;
-  stroke-width: 3;
+  fill: #ff1c9d;
+  stroke: #fff;
+  stroke-width: 1;
 }
 
 .team {
@@ -301,19 +442,6 @@ button {
   gap: 14px;
   padding: 0 20px;
 }
-@media (max-width: 768px) {
-  .team {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (max-width: 480px) {
-  .team {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
 
 .swiper-container {
   width: 100%;
@@ -322,48 +450,37 @@ button {
 }
 
 .team__member {
-  flex: 1;
-  max-width: 282px;
+  max-width: 582px;
   height: 415px;
   position: relative;
-}
-.team__member::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  margin-top: 30px;
-  border: 3px solid red;
+  border-bottom: 2px solid rgba(76, 81, 117, 0.1490196078);
   transition: opacity 0.3s ease;
-  opacity: 0;
 }
-.team__member:hover::after {
-  opacity: 1;
+.team__member:hover {
+  border-bottom: 2px solid #ff1c9d;
 }
 @media (max-width: 768px) {
   .team__member {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    max-width: 550px;
   }
 }
 
 .team__image {
   width: 100%;
-  max-width: 282px;
-  height: auto;
+  height: 320px;
 }
 @media (max-width: 768px) {
   .team__image {
     width: 100%;
-    height: auto;
+    max-width: 550px;
   }
 }
 
 .team__member__name {
+  margin-top: 15px;
   font-size: 20px;
   line-height: 100%;
-  margin-bottom: 5px;
 }
 
 .team__member__info {
@@ -371,10 +488,13 @@ button {
   font-weight: 500;
   line-height: 130%;
   letter-spacing: -0.25px;
-  max-width: 250px;
+  max-width: 282px;
+  opacity: 0.66;
+  padding: 5px 0;
 }
 
-.team__member-link {
+.team__member-link,
+.success-link {
   position: absolute;
   top: 0;
   left: 0;
@@ -494,9 +614,7 @@ button {
 .achievements__section-item {
   max-width: 370px;
   height: 560px;
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
   border-radius: 25px;
   display: flex;
   flex-direction: column;
@@ -504,19 +622,29 @@ button {
   padding: 30px;
 }
 
-.achivements__section-image1 {
-  background: linear-gradient(to bottom, rgba(255, 28, 157, 0.1176470588) 0%, #000000 100%), url(../uploads/image\(5\).png);
+.achievements__image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+}
+.achievements__image-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 28, 157, 0) 0%, #000000 100%);
 }
 
-.achivements__section-image2 {
-  background: linear-gradient(to bottom, rgba(255, 28, 157, 0.1176470588) 0%, #000000 100%), url(../uploads/image\(6\).png);
-}
-
-.achivements__section-image3 {
-  background: linear-gradient(to bottom, rgba(255, 28, 157, 0.1176470588) 0%, #000000 100%), url(../uploads/image\ 5.jpg);
-  background-size: 200% 100%;
-  background-position: 55% 100%;
-  background-repeat: no-repeat;
+.achievements__section-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .icon-Medal-First-Place-1 {
@@ -656,6 +784,7 @@ button {
 .success__item {
   display: flex;
   align-items: center;
+  position: relative;
   gap: 10px;
   padding: 5px 20px;
   margin-bottom: 10px;
@@ -677,20 +806,40 @@ button {
   stroke-width: 0;
   fill: #ff1c9d;
 }
+.success__icon--fancy {
+  width: 90px;
+  height: 90px;
+}
 
 .success__info {
   padding: 10px;
+  border-left: 1px inset rgba(121, 124, 152, 0.1019607843);
 }
 
 .success__date {
   font-size: 15px;
   margin-right: 15px;
 }
+.success__date--fancy {
+  font-size: 30px;
+  margin: 10px 0;
+}
 
 .success__content {
   display: inline-block;
   font-size: 15px;
   line-height: 130%;
+}
+.success__content--fancy {
+  font-size: 35px;
+  text-align: center;
+}
+
+.success__container {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  align-items: center;
 }
 
 .cta {
@@ -699,24 +848,43 @@ button {
   padding: 0 20px;
   margin: 40px auto;
   position: relative;
-  background-image: linear-gradient(to bottom, rgba(18, 57, 133, 0.5019607843) 0%, #17293e 100%), url("../uploads/image(4).png");
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   text-align: center;
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 42px;
+  border-radius: 40px;
+}
+
+.cta-image-wrapper {
+  position: absolute;
+  top: 0;
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+  z-index: -5;
+  border-radius: 40px;
+}
+.cta-image-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(18, 57, 133, 0.5019607843) 0%, #17293e 100%);
+  border-radius: 40px;
+}
+
+.cta-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
 }
 
 .cta__content-box {
   max-width: 790px;
   padding-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .cta__heading {
@@ -731,13 +899,16 @@ button {
   font-weight: 500;
   line-height: 160%;
   margin: 20px 0;
+  color: #fff;
+  text-align: center;
 }
 
 .cta__action {
   max-width: 280px;
   padding: 15px 20px;
-  border-radius: 15px;
+  border-radius: 40px;
   background-color: #ff1c9d;
+  margin: 0 auto;
   display: flex;
   align-items: center;
 }
@@ -915,16 +1086,18 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 35px;
+  gap: 120px;
 }
 @media (max-width: 768px) {
   .footer__wrapper {
     flex-direction: column;
+    gap: 40px;
   }
 }
 
 .footer__left {
   flex: 1;
+  margin: 0 auto;
 }
 @media (max-width: 768px) {
   .footer__left {
@@ -935,6 +1108,7 @@ button {
 
 .footer__left-box {
   margin-bottom: 30px;
+  width: 360px;
 }
 @media (max-width: 768px) {
   .footer__left-box {
@@ -945,7 +1119,7 @@ button {
 .footer__left-image {
   max-width: 205.8px;
   max-height: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 @media (max-width: 768px) {
   .footer__left-image {
@@ -954,7 +1128,6 @@ button {
 }
 
 .footer__left-content {
-  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 16px;
   opacity: 0.75;
@@ -974,9 +1147,10 @@ button {
 
 .footer__left-link {
   text-decoration: underline;
+  color: #fff;
 }
 .footer__left-link:hover {
-  color: #fff;
+  color: #ff1c9d;
 }
 
 .footer__center {
@@ -1092,6 +1266,7 @@ button {
 
 .footer__right {
   flex: 1;
+  text-align: center;
 }
 @media (max-width: 768px) {
   .footer__right {
