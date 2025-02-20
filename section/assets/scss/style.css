@@ -1,0 +1,247 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1210px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.similar-container {
+  width: 100%;
+}
+
+.info-container {
+  padding: 40px 100px;
+}
+
+.info__title {
+  font-size: 24px;
+  font-weight: 900;
+  font-style: italic;
+  color: #377176;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.info__details {
+  display: flex;
+  padding-left: 45px;
+  gap: 80px;
+}
+@media (max-width: 768px) {
+  .info__details {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.info__detail {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  padding-top: 5px;
+}
+.info__detail-heading {
+  font-size: 16px;
+  font-weight: 900;
+  color: #fab9a2;
+  letter-spacing: -0.5px;
+}
+.info__detail-content {
+  font-size: 15px;
+}
+.info__detail__description {
+  max-width: 900px;
+  flex: 1;
+}
+.info__detail__description-title {
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #75d5df;
+}
+.info__detail__description-content {
+  font-size: 16px;
+  font-family: "Arial Narrow", Arial, sans-serif;
+  margin-top: 16px;
+  line-height: 160%;
+}
+
+.popup-title {
+  font-size: 26px;
+  text-align: center;
+  color: #42787d;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 50px;
+}
+
+.popup__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+  padding-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .popup__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .popup__grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+.popup__grid-item {
+  position: relative;
+  max-width: 290px;
+  height: 200px;
+}
+@media (max-width: 768px) {
+  .popup__grid-item {
+    max-width: 336px;
+  }
+}
+@media (max-width: 480px) {
+  .popup__grid-item {
+    max-width: 470px;
+  }
+}
+.popup__grid-item-span-2 {
+  grid-column: span 2;
+  max-width: 580px;
+  height: 350px;
+}
+@media (max-width: 768px) {
+  .popup__grid-item-span-2 {
+    max-width: 720px;
+  }
+}
+@media (max-width: 480px) {
+  .popup__grid-item-span-2 {
+    grid-column: span 1;
+    max-width: 470px;
+  }
+}
+.popup__grid-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.popup__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.fancybox-image {
+  width: 600px;
+  height: auto;
+  padding: 30px;
+}
+@media (max-width: 768px) {
+  .fancybox-image {
+    width: 300px;
+  }
+}
+
+.fancybox__description {
+  max-width: 700px;
+}
+.fancybox__description-text {
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.fancybox-title {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.similar {
+  background-color: #e9f9f9;
+}
+.similar-title {
+  font-size: 32px;
+  text-align: center;
+  padding: 40px;
+  color: #002728;
+  font-style: italic;
+}
+.similar__item {
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  padding: 30px 0;
+}
+@media (max-width: 480px) {
+  .similar__item {
+    width: 200px;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.similar__item-image {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+}
+.similar__item-title {
+  font-size: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #00b6c7;
+}
+.similar__item-link {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+
+.similarSwiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.swiper-button-prev {
+  width: 25px;
+  left: 0;
+}
+
+.swiper-button-next {
+  width: 25px;
+  right: 0;
+}/*# sourceMappingURL=style.css.map */
